@@ -1,1 +1,37 @@
-<p>structure-details works!</p>
+<!-- structure-details.component.html -->
+<div *ngIf="loading">Loading...</div>
+
+<div *ngIf="structureDetails" class="structure-details-container">
+  <div class="dialog-header">
+    <div class="header-content">
+      <h2 mat-dialog-title class="structure-title">{{ structureDetails.label }}</h2>
+      <div class="header-underline"></div>
+    </div>
+    <button 
+      mat-icon-button 
+      (click)="onClose()" 
+      class="close-button"
+      aria-label="Close">
+      X
+    </button>
+  </div>
+  
+  <div mat-dialog-content class="dialog-content">
+    <div class="detail-section">
+      <strong>Description</strong>
+      <p>{{ structureDetails.description || 'No description available' }}</p>
+    </div>
+    <div class="detail-section">
+      <strong>Ontology Link</strong>
+      <p>{{ structureDetails.obo_id }}</p>
+    </div>
+    <div class="detail-section">
+      <strong>IRI</strong>
+      <p>{{ structureDetails.iri }}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="error">
+  <p>No details found for this structure.</p>
+</div>

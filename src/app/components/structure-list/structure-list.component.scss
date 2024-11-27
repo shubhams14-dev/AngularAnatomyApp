@@ -1,0 +1,38 @@
+/* structure-list.component.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 15px;
+  }
+  
+  .structures-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .structure-item {
+    background-color: #f0f0f0;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .structure-item:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .structure-name {
+    font-weight: bold;
+  }
+  
+  .structure-id {
+    color: #666;
+    font-size: 0.9em;
+  }
