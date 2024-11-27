@@ -92,3 +92,6 @@ export class ApiService {
 
 ## Notes
 Developed as part of an Angular Developer Test, focusing on clean architecture and functional requirements, with emphasis on using @Injectable services for managing data flow and application state.
+
+## Website is hosted on firebase.
+https://angularanatomy.web.app/
